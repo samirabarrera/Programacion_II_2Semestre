@@ -19,7 +19,15 @@
  */
 
 class Extended {
+    constructor(name, surname, email){
+        this._name = name,
+        this._surname = surname,
+        this._email = email
+    }
 
+    static match (){
+        return 'addCourse';
+    }
 }
 
 /*Ejemplo */
@@ -30,11 +38,14 @@ let teacher1 = new Teacher({name: 'Paula', surname: 'Thompkins', email: 'PaulaTh
 student1.addCourse('maths', 2);
 student1.addCourse('physics', 4);
 teacher1.addCourse('maths', 4);
+
 let match = ExtendedUser.match(teacher1, student1);
 console.log(match); // -> [{course: 'maths', level: 2}]
+
 teacher1.editCourse('maths', 1);
 match = ExtendedUser.match(teacher1, student1);
 console.log(match); // -> []
+
 teacher1.addCourse('physics', 4);
 match = ExtendedUser.match(teacher1, student1, 'physics');
 console.log(match); // -> {course: 'physics', level: 4}
