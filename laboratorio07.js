@@ -19,29 +19,33 @@
  */
 
 class Extended {
-    constructor(name, surname, email){
-        this._name = name,
-        this._surname = surname,
-        this._email = email
+    constructor(name, surname, email, course){
+        this.name = name,
+        this.surname = surname,
+        this.email = email,
+        this.courses = []
     }
 
+    get fullName () {
+        return this.fullName
+    }
     set fullName ({name, surname}){
         this._fullName = {name, surname};
         this._email = this.email
     }
-    get fullName () {
-        return this.fullName
+    addCourse(course, level){
+        this.courses.push({course, level})
     }
-
-    static match (teacher, student){
-        return 'Match between ${teacher.name} and ${student.name}'
+    static match (teacher1, student1){
+        return `Match between ${teacher.name} and ${student.name}`
     }
-    addCourse (){
-        console.log
+    removeCourse(course) {
+        this.courses.push({course})
     }
-
+    editCourse(course, level) {
+        this.courses.push({course, level})
+    }
 }
-
 class Student extends Extended {
     constructor (name, surname, email){
         super(name, surname, email);

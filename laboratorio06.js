@@ -43,15 +43,13 @@ class ExtendedUser extends User {
         this._fullNamefullName = {name, surname};
         this._email = email;
     }
-
+    get fullName () {
+        return this.fullName
+    }
     set fullName ({name, surname}){
         this._fullName = {name, surname};
         this._email = this.email
     }
-    get fullName () {
-        return this.fullName
-    }
-
     Split(){}
 }
 

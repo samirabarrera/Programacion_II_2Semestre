@@ -30,13 +30,24 @@ class Tutoring {
         this._surname = surname,
         this._email = email
     }
-
-    getStudentByName(name, surname){}
-    getTeacherByName(name, surname){}
-    getStudentsForTeacher(teacher){}
-
-    addStudent(name, surname, email){}
-    addTeacher(name, surname, email){}
+    static match (teacher1, student1){
+        return `Match between ${teacher.name} and ${student.name}`
+    }    
+    getStudentByName(name, surname) {
+        return this.student.find(student.name === name && student.surname === surname);
+    }
+    getTeacherByName(name, surname) {
+        return this.teacher.find(teacher.name === name && teacher.surname === surname);
+    }
+    getStudentsForTeacher(teacher) {
+        return this.student.filter(ExtendedUser.match(teacher, student).length > 0);
+    }
+    addStudent(name, surname, email){
+        return this.student.push(Student);
+    }
+    addTeacher(name, surname, email){
+        return this.teacher.push(Teacher);
+    }
 }
 
 let tutoring = new Tutoring();
