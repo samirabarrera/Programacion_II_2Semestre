@@ -19,7 +19,7 @@ class User {
         this._surname = surname,
         this._email = email,
         this._role = role
-        this._courses = [] // this.course = courses
+        this._courses = [] //o this.course = courses
     }
     addCourse(course, level) {}
     removeCourse(course) {}
@@ -44,6 +44,8 @@ class ExtendedUser extends User {
 
     Split(){}
 }
+
+
 
 let student1 = new Student({name: 'Rafael', surname: 'Fife', email: 'rfife@rhyta.com'});
 let student2 = new Student({name: 'Kelly', surname: 'Estes', email: 'k_estes@dayrep.com'});

@@ -28,7 +28,21 @@ class Extended {
     static match (){
         return 'addCourse';
     }
+
+    class Student extends Extended {
+        constructor (name, surname, email){
+            this.name = name,
+            
+        }
+    }
+    class Teacher extends Extended {
+        constructor (name, surname, email){
+            this.
+        }
+    }
 }
+
+
 
 /*Ejemplo */
 let student1 = new Student({name: 'Rafael', surname: 'Fife', email: 'rfife@rhyta.com'});
