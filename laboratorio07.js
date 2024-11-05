@@ -25,24 +25,33 @@ class Extended {
         this._email = email
     }
 
-    static match (){
-        return 'addCourse';
+    set fullName ({name, surname}){
+        this._fullName = {name, surname};
+        this._email = this.email
+    }
+    get fullName () {
+        return this.fullName
     }
 
-    class Student extends Extended {
-        constructor (name, surname, email){
-            this.name = name,
-            
-        }
+    static match (){
+        this.ExtendedUser = match;
     }
-    class Teacher extends Extended {
-        constructor (name, surname, email){
-            this.
-        }
+    addCourse (){
+        console.log
     }
+
 }
 
-
+class Student extends Extended {
+    constructor (name, surname, email){
+        super(name, surname, email);
+    }
+}
+class Teacher extends Extended {
+    constructor (name, surname, email){
+        super(name, surname, email);
+    }
+}
 
 /*Ejemplo */
 let student1 = new Student({name: 'Rafael', surname: 'Fife', email: 'rfife@rhyta.com'});
@@ -63,3 +72,4 @@ console.log(match); // -> []
 teacher1.addCourse('physics', 4);
 match = ExtendedUser.match(teacher1, student1, 'physics');
 console.log(match); // -> {course: 'physics', level: 4}
+

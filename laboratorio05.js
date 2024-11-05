@@ -34,15 +34,23 @@ class User {
         this._surname = surname,
         this._email = email,
         this._role = role
-        this._courses = [] // this.course = courses
+        this.courses = [] // this.course = courses
     }
     addCourse(course, level){
-        return '${courses}'
+        this.courses.push({course, level})
     }
-    removeCourse(course) {}
-    editCourse(course, level) {}
-    sendMessage(from, message) {}
-    showMessagesHistory() {}
+    removeCourse(course) {
+        this.courses.push({course})
+    }
+    editCourse(course, level) {
+        this.courses.push({course, level})
+    }
+    sendMessage(from, message) {
+        this.sendMessage.push({showMessagesHistory})
+    }
+    showMessagesHistory() {
+        this.courses.push({})
+    }
 }
 
 let student1 = new User({name: 'Rafael', surname: 'Fife', email: 'rfife@rhyta.com', role: 'student'});

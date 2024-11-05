@@ -4,7 +4,7 @@
  * Creamos una clase Tutoring que tendrá dos listas de usuarios: alumnos y profesores
  * por separado
  * 
- * Define los métpdps en la clase:
+ * Define los métodos en la clase:
  * 
  * + getStudentByName(name, surname)- que devolverá un studentobjeto con el nombre y 
  *                                    apellido indicados (o undefinedsi el estudiante no ha 
@@ -25,7 +25,18 @@
  */
 
 class Tutoring {
+    constructor(name, surname, email){
+        this._name = name,
+        this._surname = surname,
+        this._email = email
+    }
 
+    getStudentByName(name, surname){}
+    getTeacherByName(name, surname){}
+    getStudentsForTeacher(teacher){}
+
+    addStudent(name, surname, email){}
+    addTeacher(name, surname, email){}
 }
 
 let tutoring = new Tutoring();
