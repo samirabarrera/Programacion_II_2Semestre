@@ -36,7 +36,9 @@ class User {
         this._role = role
         this._courses = [] // this.course = courses
     }
-    addCourse(course, level) {}
+    addCourse(course, level){
+        return '${courses}'
+    }
     removeCourse(course) {}
     editCourse(course, level) {}
     sendMessage(from, message) {}
@@ -50,6 +52,8 @@ let teacher1 = new User({name: 'Paula', surname: 'Thompkins', email: 'PaulaThomp
 student1.addCourse('maths', 2);
 student1.addCourse('physics', 1);
 student1.removeCourse('physics');
+
+
 teacher1.addCourse('biology', 3);
 teacher1.editCourse('biology', 4);
 
