@@ -33,8 +33,8 @@ class Extended {
         return this.fullName
     }
 
-    static match (){
-        this.ExtendedUser = match;
+    static match (teacher, student){
+        return 'Match between ${teacher.name} and ${student.name}'
     }
     addCourse (){
         console.log

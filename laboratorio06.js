@@ -19,13 +19,23 @@ class User {
         this._surname = surname,
         this._email = email,
         this._role = role
-        this._courses = [] //o this.course = courses
+        this.courses = [] //o this.course = courses
     }
-    addCourse(course, level) {}
-    removeCourse(course) {}
-    editCourse(course, level) {}
-    sendMessage(from, message) {}
-    showMessagesHistory() {}
+    addCourse(course, level){
+        this.courses.push({course, level})
+    }
+    removeCourse(course) {
+        this.courses.push({course})
+    }
+    editCourse(course, level) {
+        this.courses.push({course, level})
+    }
+    sendMessage(from, message) {
+        this.sendMessage.push({showMessagesHistory})
+    }
+    showMessagesHistory() {
+        this.courses.push({})
+    }
 }
 
 class ExtendedUser extends User {
