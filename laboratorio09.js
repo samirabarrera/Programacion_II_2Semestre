@@ -28,6 +28,49 @@ for(let user of to) {
 
  */
 
+class ExtendedTutoringclase extends Tutoring {
+    constructor ({name, surname, email}) {
+        this.name = name,
+        this.surname = surname,
+        this.email = email
+    } 
+    get tutoring(){
+        constructor({name, surname, email})
+        this.name = name,
+        this.surname = surname,
+        this.email = email
+    } 
+
+    addStudent (name, surname, email) {
+        return this.student.push(Student);
+    }
+    addTeacher(name, surname, email){
+        return this.teacher.push(Teacher);
+    }
+    getStudentByName(name){
+        return this.student.name(Student)
+
+    }
+    sendMessages (){}
+}
+
+let tutoring = new ExtendedTutoring ();
+
+tutoring.addStudent('Rafael', 'Fife','rfife@rhyta.com');
+tutoring.addStudent('Kelly', 'Estes', 'k_estes@dayrep.com');
+tutoring.addTeacher('Paula', 'Thompkins', 'PaulaThompkins@jourrapide.com');
+
+let to = [];
+to.push(tutoring.getStudentByName('Rafael', 'Fife'));
+to.push(tutoring.getStudentByName('Kelly', 'Estes'));
+tutoring.sendMessages(tutoring.getTeacherByName('Paula', 'Thompkins'), to, 'test message');
+
+for(let user of to) {
+    user.showMessagesHistory();
+}
+
+
+//USER class
 class User {
     constructor({name, surname, email, role}) {
         this.name = name;
@@ -153,21 +196,3 @@ class ExtendedTutoring extends Tutoring {
         });
     }
 }
-
-// Pruebas
-let tutoring = new ExtendedTutoring();
-tutoring.addStudent('Rafael', 'Fife', 'rfife@rhyta.com');
-tutoring.addStudent('Kelly', 'Estes', 'k_estes@dayrep.com');
-tutoring.addTeacher('Paula', 'Thompkins', 'PaulaThompkins@jourrapide.com');
-
-let to = [];
-to.push(tutoring.getStudentByName('Rafael', 'Fife'));
-to.push(tutoring.getStudentByName('Kelly', 'Estes'));
-
-tutoring.sendMessages(tutoring.getTeacherByName('Paula', 'Thompkins'), to, 'test message');
-
-for (let user of to) {
-    user.showMessagesHistory();
-}
-// -> PaulaThompkins@jourrapide.com -> rfife@rhyta.com: test message
-// -> PaulaThompkins@jourrapide.com -> k_estes@dayrep.com: test message
