@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <body>
+      <button onclick="changeColor()" > Repaint! </button>
+  </body>
+    <!--El código JavaScript se encuentra entre las etiquetas <scirpt> JavaScript  </script> -->
+      <script> 
+        function getRandomColor(){
+          let letters = '0123456789ABCDEF';
+          let color = '#';
+          for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+        function changeColor(){
+          let newColor = getRandomColor();
+          document.body.style.backgroundColor = newColor;
+          //La palabra clave accede al color de fondo de la                 
+          // página y lo establece igual al nuevo color
+        }
+    </script>
+  
+</html>
